@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP-Harry potters</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .formu {
+            border-style: double;
+            background-color: grey;
+            text-align: center;
+            padding: 10px;
+            left: 450px;
+            display: inline-flex;
+        }
+        .label{
+            margin: 10px;
+        }
+        .EsMago{
+            margin: 10px;
+        }
+        .Fecha{
+            margin: 10px;
+        }
+        .filtrar{
+            margin: 10px;
+        }
+        .BtonBuscar{
+            margin: 10px; 
+        }
+        .BtonTdos{
+            margin: 10px;     
+        }
+        .Icono{
+            height: 65px;
+            float: left;
+        }
+       
+        .card {
+            padding: 50px;
+            color: aqua;
+            float: left;
+            margin: 30px;
+            border: 5px solid gray;
+        }
+        .imagen {
+            height: 250px;
+            width: 250px;
+        }
+        .vivo{
+            opacity: 0.3;
+            height: 250px;
+            width: 250px;
+            position: absolute;
+             display: flex;
+            border: 5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <img class="Icono" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FxvrvWWttoc9_bsw7zmY7sIG3lWPYLjbwU8zM5Xf9e8gwL3EHMPaPliir8xrm1v-Ogk&usqp=CAU">
+    <form class ="formu" action="">
+        <label  class="label" for=""> Mostrar Mago: </label>
+        <select class="EsMago" name="EsMago" id="EsMago"></select><br>
+        <label class="label" for="">Fecha de nacimiento: </label>
+        <input type="date" class="Fecha" id="Fecha" max="2000-12-31"><br>
+        <label class="label" for="">Filtrar personajes sin fecha de nacimiento?</label>
+        <input type="checkbox" class="filtrar" id="filtrar"><br>
+        <input type="button" class="BtonBuscar" value="Buscar" onclick="recuperar()">
+        <input type="button" class="BtonTdos" value="Mostrar todos" onclick="mostrarTodos()">
+    </form>
+    
+    <div class="cards" id="cards" ></div>
+    <script src="app.js">
+    </script>
+</body>
+</html>
